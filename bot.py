@@ -166,7 +166,7 @@ def main():
     app.add_handler(CommandHandler("jadval", jadval))
     app.add_handler(CallbackQueryHandler(button))
     print("Bot ishga tushdi!")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":
     main()
